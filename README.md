@@ -89,6 +89,7 @@ source venv/bin/activate
 
 ~~~
 - 필요한 패키지를 설치합니다: 
+
 ~~~
 pip install -r requirements.txt
 ~~~
@@ -96,6 +97,7 @@ pip install -r requirements.txt
 - .env 파일을 설정합니다.
 
 - 애플리케이션을 실행합니다: 
+
 ~~~
 # fastapi 실행
 uvicorn app.main:app --reload
