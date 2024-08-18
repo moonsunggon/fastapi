@@ -77,6 +77,7 @@ myproject/
 
 # 가상환경 생성
 python -m venv venv
+
 # 가상환경 활성화
 venv\Scripts\activate
 
@@ -114,6 +115,7 @@ uvicorn app.main:app --reload
 ~~~
 # 새 패키지를 설치할 때
  pip install <package_name>
+
 # 파이선 설치 환경 파일 업데이트(requirements.txt)
 pip freeze > requirements.txt
 ~~~
