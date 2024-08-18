@@ -1,6 +1,9 @@
 import os
 import subprocess
 
+'''
+초기 폴더 생성 스크립트
+'''
 def create_directory(path):
     os.makedirs(path, exist_ok=True)
 
@@ -81,16 +84,19 @@ def create_project_structure(base_dir):
 
     print(f"Project structure created in {base_dir}")
 
+'''
+초기 폴더 생성 스크립트로 필요시에만 주석 풀어서 사용.
+'''
 if __name__ == "__main__":
-    project_name = input("Enter your project name: ")
-    base_dir = os.path.join(os.getcwd(), project_name)
-    create_project_structure(base_dir)
+    # project_name = input("Enter your project name: ")
+    # base_dir = os.path.join(os.getcwd(), project_name)
+    # create_project_structure(base_dir)
 
-    # Initialize git repository
-    try:
-        subprocess.run(['git', 'init', base_dir], check=True)
-        print("Git repository initialized.")
-    except subprocess.CalledProcessError:
-        print("Failed to initialize git repository. Make sure git is installed.")
-    except FileNotFoundError:
-        print("Git is not installed or not in the system PATH.")
+    # # Initialize git repository
+    # try:
+    #     subprocess.run(['git', 'init', base_dir], check=True)
+    #     print("Git repository initialized.")
+    # except subprocess.CalledProcessError:
+    #     print("Failed to initialize git repository. Make sure git is installed.")
+    # except FileNotFoundError:
+    #     print("Git is not installed or not in the system PATH.")
