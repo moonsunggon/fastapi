@@ -12,6 +12,7 @@ class Item(BaseModel):
     description: Optional[str] = None
     price: float
 
+
 items = []
 
 
@@ -56,9 +57,3 @@ async def delete_item(item_id: int):
         raise HTTPException(status_code=404, detail="Item not found")
     items.pop(index)
     return {"message": "Item deleted successfully"}
-
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(app, host="0.0.0.0", port=8000)
