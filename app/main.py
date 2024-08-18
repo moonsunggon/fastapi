@@ -126,7 +126,7 @@ async def delete_item(item_id: int):
 @app.post("/items-from-csv/", response_model=List[Item], tags=["csv", "items"])
 async def create_items_from_csv(file: UploadFile = File(...)):
     """
-    CSV 파일을 업로드하여 새로운 아이템들을 생성합니다.
+    CSV 파일을 업로드하여 새로운 아이템들을 생성합니다. 예제 파일 : customer_test.csv
 
     Args:
         file (UploadFile): 업로드할 CSV 파일 (id, name, description, price 열 포함)
