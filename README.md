@@ -109,4 +109,11 @@ uvicorn app.main:app --reload
 - 데이터베이스 모델을 변경할 때는 app/models/ 디렉토리에서 작업하고, Alembic을 사용하여 마이그레이션을 생성하세요.
 - 모든 설정은 app/core/config.py에서 관리합니다.
 - 테스트 코드는 tests/ 디렉토리에 작성하며, pytest를 사용하여 실행합니다.
-- 항상 가상환경 내에서 작업하세요. 새 패키지를 설치할 때는 pip install <package_name>을 사용하고, 설치 후 pip freeze > requirements.txt를 실행하여 requirements.txt 파일을 업데이트하세요.
+- 항상 가상환경 내에서 작업하세요. 
+
+~~~
+# 새 패키지를 설치할 때
+ pip install <package_name>
+# 파이선 설치 환경 파일 업데이트(requirements.txt)
+pip freeze > requirements.txt
+~~~
